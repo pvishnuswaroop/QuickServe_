@@ -1,0 +1,85 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Get Food Delivered Fast</h1>
+      <p>Discover top restaurants, delicious meals, and enjoy the best delivery service around.</p>
+      <div class="search-bar">
+        <input type="text" placeholder="Search restaurants, cuisines, or dishes" />
+        <button>
+          <i class="material-icons">search</i>
+        </button>
+      </div>
+      <div class="login-section" *ngIf="!isLoggedIn()">
+        <button routerLink="/login">
+          <i class="material-icons">login</i>
+          Login / Sign Up
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <h2>What are you craving?</h2>
+    <div class="items-grid">
+      <div class="item">
+        <img src="https://thumbs.dreamstime.com/b/kachori-potato-samosa-green-chilly-plate-famous-spicy-snack-india-207213854.jpg" alt="Kachori" />
+        <p>Kachori</p>
+      </div>
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLhPrmLd1WyIqT6eHkNd-uv1V4NpQ94-1Lmg&s" alt="Chaat" />
+        <p>Chaat</p>
+      </div>
+      <div class="item">
+        <img src="https://www.eg2i.com/uploads/product_image/product_795_1.jpg" alt="Sweets" />
+        <p>Sweets</p>
+      </div>
+      <div class="item">
+        <img src="https://cdn.shopify.com/s/files/1/0274/9503/9079/files/20220211142754-margherita-9920_5a73220e-4a1a-4d33-b38f-26e98e3cd986.jpg?v=1723650067" alt="Pizza" />
+        <p>Pizza</p>
+      </div>
+      <div class="item">
+        <img src="https://www.scratchingcanvas.com/wp-content/uploads/2019/04/Laccha-Paratha-Easy.3.jpg" alt="Paratha" />
+        <p>Paratha</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Restaurants Section -->
+  <section class="trending">
+    <h2>Trending Restaurants</h2>
+    <div class="trending-cards">
+      <div class="card">
+        <img src="https://t3.ftcdn.net/jpg/02/06/04/70/360_F_206047084_OxZGQ404N8rocQmItLIQRMRWlQwV3mSH.jpg" />
+        <div class="card-content">
+          <h3>Restaurant 1</h3>
+          <p>4.5 ★ | Italian, Pizza</p>
+          <p class="delivery">30 mins | Free Delivery</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/restaurant-interior_1127-3394.jpg" alt="Restaurant 2" />
+        <div class="card-content">
+          <h3>Restaurant 2</h3>
+          <p>4.7 ★ | Chinese, Thai</p>
+          <p class="delivery">25 mins | Free Delivery</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://t3.ftcdn.net/jpg/03/24/73/92/360_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg" alt="Restaurant 3" />
+        <div class="card-content">
+          <h3>Restaurant 3</h3>
+          <p>4.6 ★ | Burgers, Fast Food</p>
+          <p class="delivery">20 mins | Free Delivery</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <h2>Get Hungry? Start Exploring!</h2>
+    <button routerLink="/restaurants">Explore Restaurants</button>
+  </section>
+</div>

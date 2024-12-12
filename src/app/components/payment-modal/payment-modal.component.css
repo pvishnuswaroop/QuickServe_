@@ -1,0 +1,130 @@
+/* Center the whole page content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default body margin */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  font-family: Arial, sans-serif;
+  color: #222; /* Ensure a dark, readable text color */
+}
+
+/* Payment Title */
+.payment-title {
+  font-size: 1.5rem; /* Increased font size for better visibility */
+  font-weight: bold;
+  color: #000000; /* White text for the header */
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Amazon Ember', sans-serif; /* Optional font similar to Amazon */
+  background-color: #ffffff; /* Black background for the header */
+  padding: 20px; /* Add padding to give it some space around the text */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Payment Container */
+.payment-container {
+  max-width: 500px; /* Increase max-width for larger form */
+  width: 100%;
+  padding: 40px;
+  background-color: #ffffff; /* Clean white background */
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth */
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Spacing between elements */
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+/* Payment Method Selector */
+.payment-select {
+  width: 100%;
+}
+
+.payment-method-select {
+  font-size: 1.2rem; /* Larger font size for better readability */
+  padding: 12px;
+  font-weight: 500; /* Moderate font weight for balance */
+  border: 2px solid #ccc; /* Slightly darker border for visibility */
+  border-radius: 8px;
+  background-color: #000000; /* Slightly lighter background for input fields */
+  transition: border-color 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-form-field:focus-within .mat-mdc-form-field-outline {
+  border-color: #000000; /* Amazon Yellow for focus */
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+
+.pay-now-btn, .cancel-btn {
+  flex-grow: 1;
+  padding: 16px; /* Slightly larger padding for button click areas */
+  font-size: 1.2rem; /* Increased font size for better visibility */
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #ddd; /* Subtle border for a clean look */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-align: center; /* Center the button text */
+  background-color: #fff; /* White background */
+  color: #333; /* Dark text for readability */
+}
+
+/* Hover Effects */
+.pay-now-btn:hover {
+  background-color: #ff9900; /* Amazon Yellow for hover */
+  color: #fff; /* White text on hover */
+  border-color: #ff9900; /* Match hover color */
+}
+
+.cancel-btn:hover {
+  background-color: #e74c3c; /* Red for cancel button hover */
+  color: #fff; /* White text on hover */
+  border-color: #e74c3c; /* Match hover color */
+}
+
+
+.cancel-btn {
+  background-color:  #ff9900;
+  color: #333; /* Ensure dark text color on light background */
+  border: 1px solid  #ff9900;
+}
+
+.cancel-btn:hover {
+  background-color: #ff9900; /* Slight hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .payment-container {
+      width: 90%; /* Ensure it remains responsive on mobile */
+      padding: 25px;
+  }
+
+  .payment-title {
+      font-size: 1.8rem; /* Slightly smaller font on mobile */
+  }
+
+  .pay-now-btn, .cancel-btn {
+      width: 100%;
+      padding: 14px; /* Adjust padding for mobile */
+  }
+
+  .actions {
+      flex-direction: column;
+      gap: 10px; /* Add vertical spacing for stacked buttons */
+  }
+}

@@ -1,0 +1,109 @@
+/* General styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F4F4F4;
+  color: #333;
+  padding: 20px;
+}
+
+h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+.no-ratings {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FF6F61;
+  background-color: #FFF2F2;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.rating-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rating-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Rating Header */
+.rating-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.restaurant-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.order-id {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Rating Stars and Score */
+.rating-stars {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.rating-score {
+  font-size: 20px;
+  color: #FF6F61;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.rating-body {
+  font-size: 16px;
+  color: #666;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Button and Icon Style */
+.rating-stars span {
+  font-size: 22px;
+  color: #FF6F61;
+  margin-right: 5px;
+}
+
+/* Responsive Design for mobile */
+@media (max-width: 768px) {
+  .rating-item {
+    padding: 15px;
+  }
+
+  .restaurant-name {
+    font-size: 18px;
+  }
+
+  .rating-score {
+    font-size: 18px;
+  }
+
+  .review-text {
+    font-size: 14px;
+  }
+}

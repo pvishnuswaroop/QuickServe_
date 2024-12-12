@@ -1,0 +1,33 @@
+<header class="header-container">
+  <div class="logo">
+    <a routerLink="/">QuickServe</a>
+  </div>
+  <nav class="nav-links">
+    <a routerLink="/">Home</a>
+    <a routerLink="/restaurants">Explore</a>
+    <a routerLink="/orders">Orders</a>
+    <a routerLink="/cart" class="cart-icon">
+      <i class="material-icons">shopping_cart</i>
+      <span class="cart-count">{{ cartItemCount }}</span>
+    </a>
+
+    <div *ngIf="isLoggedIn(); else loginSignupSection" class="profile-dropdown">
+      <button mat-button [matMenuTriggerFor]="menu">
+        <!-- User Icon added here -->
+        <mat-icon>account_circle</mat-icon>
+        <span class="username">Hello, {{ userName }}</span>
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+    
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/profile">View Profile</button>
+        <button mat-menu-item routerLink="/ratings">View Ratings/Reviews</button>
+        <button mat-menu-item (click)="logout()">Logout</button>
+      </mat-menu>
+    </div>
+
+    <ng-template #loginSignupSection>
+      <button mat-button routerLink="/login">Login/Signup</button>
+    </ng-template>
+  </nav>
+</header>

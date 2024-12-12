@@ -1,0 +1,100 @@
+/* Dialog Title */
+.dialog-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 8px 8px 0 0;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Dialog Content */
+  .dialog-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 0;
+  }
+  
+  /* Address Input Field */
+  .address-field {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .mat-form-field-label {
+    color: #666;
+  }
+  
+  .mat-input-element {
+    font-size: 1rem;
+    padding: 12px;
+  }
+  
+  /* Action Buttons */
+  .dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  /* Cancel Button */
+  .cancel-btn {
+    background-color: #f44336; /* Red color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #e53935; /* Darker red on hover */
+    transform: translateY(-2px);
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    background-color: #ff5722; /* Orange color */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design for Small Screens */
+  @media (max-width: 600px) {
+    .dialog-content {
+      min-width: 85%;
+    }
+  
+    .dialog-title {
+      font-size: 1.6rem;
+    }
+  
+    .submit-btn, .cancel-btn {
+      font-size: 0.9rem;
+    }
+  }
+  

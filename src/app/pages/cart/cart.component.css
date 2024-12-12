@@ -1,0 +1,141 @@
+/* General Container */
+.cart-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Darker shadow */
+}
+
+/* Cart Title */
+.cart-container h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000; /* Black for the title */
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Cart Items Table */
+.cart-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.cart-items-table th, .cart-items-table td {
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.cart-items-table th {
+  background-color: #f5f5f5;
+  font-weight: 700;
+}
+
+.cart-items-table td {
+  background-color: #fafafa;
+}
+
+.cart-items-table button {
+  padding: 5px 10px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cart-items-table button:hover {
+  background-color: #444;
+}
+
+.cart-items-table .remove-btn {
+  background-color: #d9534f;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Add space between the icon and text */
+  cursor: pointer;
+  border: none; /* Remove default button border */
+}
+.cart-items-table .remove-btn i {
+  font-size: 16px; /* Size of the icon */
+}
+
+.cart-items-table .remove-btn:hover {
+  background-color: #c9302c;
+}
+/* Invoice Table */
+.cart-invoice {
+  margin-top: 30px;
+}
+
+.cart-invoice table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-invoice th, .cart-invoice td {
+  padding: 12px;
+  font-size: 16px;
+  color: #333; /* Darker gray for text */
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.cart-invoice th {
+  background-color: #f5f5f5;
+  font-weight: 700;
+}
+
+.cart-invoice td {
+  background-color: #fafafa;
+}
+
+.cart-invoice .total td {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+  text-align: right;
+}
+
+/* Cart Actions */
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.cart-actions button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 30px;
+}
+
+.cart-actions .clear-cart-btn {
+  background-color: #FF6F61; /* Red for clear cart */
+}
+
+.cart-actions .clear-cart-btn:hover {
+  background-color: #FF6F61; /* Darker red for hover */
+}
+
+.cart-actions .order-now-btn {
+  background-color: #000; /* Black for order now button */
+  color: white;
+}
+
+.cart-actions .order-now-btn:hover {
+  background-color: #444; /* Darker gray for hover */
+}

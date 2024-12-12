@@ -1,0 +1,19 @@
+<div class="payment-container">
+  <h2 class="payment-title">Select Payment Method</h2>
+
+  <!-- Payment Method Selector -->
+  <mat-form-field appearance="fill" class="payment-select">
+    <mat-label>Choose Payment Method</mat-label>
+    <mat-select [(ngModel)]="selectedMethod" class="payment-method-select">
+      <mat-option *ngFor="let method of paymentMethods" [value]="method.value">
+        {{ method.label }} 
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Action Buttons -->
+  <div class="actions">
+    <button mat-raised-button color="primary" class="pay-now-btn" (click)="makePayment()">Pay Now</button>
+    <button mat-raised-button color="warn" class="cancel-btn" (click)="dialogRef.close()">Cancel</button>
+  </div>
+</div>

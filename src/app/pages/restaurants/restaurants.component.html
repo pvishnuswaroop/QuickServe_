@@ -1,0 +1,42 @@
+<div class="restaurants-container">
+  <h1>Explore Restaurants</h1>
+
+  <div *ngIf="isLoading" class="loading">
+    <p>Loading restaurants...</p>
+  </div>
+
+  <div *ngIf="!isLoading && restaurants.length > 0" class="restaurant-list">
+    <div *ngFor="let restaurant of restaurants" class="restaurant-card">
+      <h2>{{ restaurant.name }}</h2>
+
+      <!-- Display specific images based on restaurant name -->
+      <div class="restaurant-image">
+        <img 
+          [src]="restaurant.name === 'Tandoori Palace' 
+                    ? 'https://img.restaurantguru.com/re34-photo-Tandoori-Palace-2021-09-995986.jpg' 
+                    : restaurant.name === 'Saffron Spice' 
+                    ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvRMJDLK85VeiDuL-2fY0xpkM4R__h6ouq6w&s' 
+                    : restaurant.name === 'Spice Symphony' 
+                    ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaAlwPlAHOVWqKEo_ZB5qzo3DCB-A4TWNqXylS-DSfIvTeBlsco0t4gVPzeDBTnsfrMxM&usqp=CAU' 
+                    : restaurant.name === 'Ocean Breeze Diner' 
+                    ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsYs3DxaGDg2nUB0qhi28UMeVWqEeG9Ms1sw&s'
+                    : 'https://via.placeholder.com/150'" 
+          alt="{{ restaurant.name }}" 
+        />
+      </div>
+
+      <p>Location: {{ restaurant.location }}</p>
+      <p>Phone: {{ restaurant.phoneNumber }}</p>
+      <p>Status: 
+        <span [class.online]="restaurant.isActive === 'Online'" [class.offline]="restaurant.isActive === 'Offline'">
+          {{ restaurant.isActive }}
+        </span>
+      </p>
+      <button (click)="viewMenu(restaurant.restaurantID)">View Menu</button>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoading && restaurants.length === 0" class="no-data">
+    <p>No restaurants available.</p>
+  </div>
+</div>

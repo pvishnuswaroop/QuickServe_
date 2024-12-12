@@ -1,0 +1,46 @@
+<div class="menu-modal-container">
+  <h2>Menu</h2>
+  <div *ngIf="data.menu.length > 0; else noMenu" class="menu-list">
+    <div *ngFor="let item of data.menu" class="menu-item">
+      <!-- Item Content -->
+      <div class="menu-item-content">
+        <!-- Item Name -->
+        <h3>{{ item.itemName }}</h3>
+        <!-- Item Description -->
+        <p>{{ item.description }}</p>
+        <!-- Item Category -->
+        <p>Category: {{ item.category }}</p>
+        <!-- Item Price -->
+        <p>Price: ₹{{ item.price }}</p>
+        <!-- Item Availability -->
+        <p>Availability: {{ item.availabilityTime }}</p>
+        <!-- Dietary Info -->
+        <p>Dietary Info: {{ item.dietaryInfo }}</p>
+        <!-- Item Status -->
+        <p>Status: {{ item.status }}</p>
+      </div>
+
+      <!-- Add to Cart or Quantity Controls -->
+      <div *ngIf="cart[item.menuID]; else addToCartButton">
+        <div class="quantity-controls">
+          <button (click)="updateQuantity(item, false)">-</button>
+          <span>{{ cart[item.menuID] }}</span>
+          <button (click)="updateQuantity(item, true)">+</button>
+        </div>
+      </div>
+      <ng-template #addToCartButton>
+        <button (click)="addToCart(item)" class="add-to-cart">Add to Cart</button>
+      </ng-template>
+    </div>
+  </div>
+
+  <ng-template #noMenu>
+    <p>No menu items available for this restaurant.</p>
+  </ng-template>
+
+  <div class="close-icon" mat-dialog-close>
+    <i class="fas fa-times"></i>
+  </div>
+  
+  
+</div>

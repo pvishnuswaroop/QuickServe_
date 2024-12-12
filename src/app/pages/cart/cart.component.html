@@ -1,0 +1,74 @@
+<div class="cart-container">
+    <h2>Your Cart</h2>
+  
+    <!-- Display cart items only if there are items in the cart -->
+    <div *ngIf="cartItems.length > 0; else emptyCart">
+        <table class="cart-items-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of cartItems">
+                    <td>{{ item.itemName }}</td>
+                    <td>{{ item.price | currency: 'INR' }}</td>
+                    <td>
+                        <button (click)="updateQuantity(item.menuID, item.quantity - 1)">-</button>
+                        {{ item.quantity }}
+                        <button (click)="updateQuantity(item.menuID, item.quantity + 1)">+</button>
+                    </td>
+                    <td>₹{{ item.price * item.quantity }}</td>
+                    <td>
+                        <button (click)="removeItem(item.menuID)" class="remove-btn">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                      </td>                     
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  
+    <!-- Invoice Section -->
+    <div class="cart-invoice" *ngIf="!isCartEmpty()">
+        <h3>Invoice</h3>
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of cartItems">
+                    <td>{{ item.itemName }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>₹{{ item.price * item.quantity }}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"><strong>Total Amount:</strong></td>
+                    <td>₹{{ getTotalAmount() }}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+  
+    <!-- Cart Action Buttons -->
+    <div class="cart-actions" *ngIf="!isCartEmpty()">
+        <button (click)="clearCart()" class="clear-cart-btn">Clear Cart</button>
+        <button (click)="placeOrder()" class="order-now-btn">Order Now</button>
+    </div>
+  
+    <!-- Empty Cart Message -->
+    <ng-template #emptyCart>
+        <p>Your cart is empty. Add items to your cart to proceed.</p>
+    </ng-template>
+  </div>
+  

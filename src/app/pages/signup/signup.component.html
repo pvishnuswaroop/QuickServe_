@@ -1,0 +1,77 @@
+<div class="quickserve-signup-container">
+  <div class="quickserve-overlay"></div>
+  <div class="signup-card">
+    <div class="logo">
+      <img src="https://beedatatech.com/Quickserve/assets/img/logo.png" alt="QuickServe Logo">
+    </div>
+    <h2>Create an Account</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="register()">
+      <div class="form-group">
+        <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" placeholder="Enter your name" />
+      <div *ngIf="signupForm.get('name')?.touched && signupForm.get('name')?.invalid" class="error">
+        <small *ngIf="signupForm.get('name')?.errors?.['required']">Name is required.</small>
+      </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="Enter your email" />
+      <div *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.invalid" class="error">
+        <small *ngIf="signupForm.get('email')?.errors?.['required']">Email is required.</small>
+        <small *ngIf="signupForm.get('email')?.errors?.['email']">Enter a valid email address.</small>
+      </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" placeholder="Create a password" />
+      <div *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.invalid" class="error">
+        <small *ngIf="signupForm.get('password')?.errors?.['required']">Password is required.</small>
+        <small *ngIf="signupForm.get('password')?.errors?.['minlength']">
+          Password must be at least 6 characters.
+        </small>
+      </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="contactNumber">Contact Number</label>
+      <input id="contactNumber" type="tel" formControlName="contactNumber" placeholder="Enter your contact number" />
+      <div *ngIf="signupForm.get('contactNumber')?.touched && signupForm.get('contactNumber')?.invalid" class="error">
+        <small *ngIf="signupForm.get('contactNumber')?.errors?.['required']">Contact number is required.</small>
+        <small *ngIf="signupForm.get('contactNumber')?.errors?.['pattern']">
+          Enter a valid contact number (10-15 digits).
+        </small>
+      </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select id="role" formControlName="role">
+          <option value="" disabled>Select Role</option>
+          <option value="Customer">Customer</option>
+          <option value="RestaurantOwner">Restaurant Owner</option>
+          <option value="Admin">Admin</option>
+        </select>
+        <div *ngIf="signupForm.get('role')?.touched && signupForm.get('role')?.invalid" class="error">
+          <small *ngIf="signupForm.get('role')?.errors?.['required']">Role is required.</small>
+        </div>
+      </div>
+
+
+      <button type="submit" [disabled]="!signupForm.valid">Sign Up</button>
+    </form>
+    <div class="signup-text">
+      <p>Already have an account? <a routerLink="/login">Login</a></p>
+    </div>
+
+
+    <p *ngIf="successMessage">{{ successMessage }}</p>
+<p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </div>
+  
+</div>

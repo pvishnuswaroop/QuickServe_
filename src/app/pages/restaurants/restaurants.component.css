@@ -1,0 +1,101 @@
+/* Restaurant Card */
+.restaurant-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+/* Hover Effect */
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.restaurant-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Restaurant Name */
+.restaurant-card h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Location and Status */
+.restaurant-card p {
+  font-size: 0.95rem;
+  color: #777;
+  margin: 5px 0;
+}
+
+.restaurant-card .status {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.restaurant-card span.online {
+  color: #4CAF50; /* Green for online */
+}
+
+.restaurant-card span.offline {
+  color: #F44336; /* Red for offline */
+}
+
+/* Button */
+.restaurant-card button {
+  background-color: #FF6347; /* Tomato for the button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Hover Effect on Button */
+.restaurant-card button:hover {
+  background-color: #e55347; /* Darker red on hover */
+}
+
+/* Loading and No Data Messages */
+.loading, .no-data {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Container */
+.restaurants-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

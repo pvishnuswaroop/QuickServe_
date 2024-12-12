@@ -1,0 +1,177 @@
+/* Header Container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #F44336, #FF6347); /* Gradient from Red to Tomato */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  font-family: 'Poppins', Merriweather ; /* Modern, clean font */
+}
+
+/* Logo */
+.logo a {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #FFEB3B; /* Yellow hover effect for elegance */
+}
+
+/* Profile Dropdown */
+.profile-dropdown button {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-dropdown button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle background change */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.profile-dropdown .username {
+  margin-left: 10px;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.profile-dropdown button:active {
+  background-color: rgba(255, 255, 255, 0.3); /* Darker background on click */
+}
+
+/* User Icon */
+.mat-icon {
+  font-size: 20px;
+  margin-right: 8px;
+  color: #FFEB3B; /* Yellow color for the icon */
+  display: flex;
+  align-items: center;
+}
+
+/* Profile Menu */
+mat-menu {
+  background-color: #333333; /* Dark background for the menu */
+  color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+mat-menu button {
+  font-size: 16px;
+  padding: 12px 20px;
+  font-weight: 500;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+mat-menu button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+mat-menu button:active {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly darker on click */
+}
+
+/* Cart Icon */
+.cart-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FFEB3B; /* Yellow hover effect for links */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.nav-links a:active {
+  color: #FF9800; /* Slightly darker gold on click */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .logo a {
+    font-size: 24px;
+  }
+}
+
+/* Button Styling for Restaurant Card */
+.restaurant-card button {
+  background-color: #FF6347; /* Tomato color for the button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.restaurant-card button:hover {
+  background-color: #FF4500; /* Darker tomato color on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.restaurant-card button:active {
+  background-color: #FF3B2E; /* Even darker tomato color on click */
+}
+

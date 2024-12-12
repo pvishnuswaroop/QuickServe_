@@ -1,0 +1,31 @@
+<div class="orders-container">
+  <h1>Your Orders</h1>
+
+  <div *ngIf="orders.length === 0" class="no-orders">
+    <p>No orders found. Place an order to see it here.</p>
+  </div>
+
+  <div *ngFor="let order of orders" class="order-card">
+    <h3>{{ order.restaurantName }}</h3>
+    <p class="order-info"><strong>Order Date:</strong> {{ order.orderDate | date: 'medium' }}</p>
+    <p class="order-info"><strong>Status:</strong> <span [ngClass]="{'delivered': order.orderStatus === 'Delivered', 'pending': order.orderStatus === 'Pending'}">{{ order.orderStatus }}</span></p>
+    <p class="order-info"><strong>Address:</strong> {{ order.address }}</p>
+
+    <ul class="order-items">
+      <li *ngFor="let item of order.itemDetails" class="order-item">
+        <span>{{ item.itemName }} - Quantity: {{ item.quantity }} | Price: ₹{{ item.price }}</span>
+      </li>
+    </ul>
+
+    <p class="total-amount"><strong>Total Amount:</strong> ₹{{ order.totalAmount }}</p>
+
+    <div *ngIf="order.rating; else rateOrder">
+      <p>Rating: {{ order.rating.ratingScore }} ★</p>
+      <p>Review: {{ order.rating.reviewText }}</p>
+    </div>
+
+    <ng-template #rateOrder>
+      <button mat-button class="rate-button" (click)="openRatingModal(order)">Rate Order</button>
+    </ng-template>
+  </div>
+</div>

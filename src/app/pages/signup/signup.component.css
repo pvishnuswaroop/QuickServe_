@@ -1,0 +1,135 @@
+/* Background Styling */
+.quickserve-signup-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: url('https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+}
+
+.quickserve-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+  z-index: 1;
+}
+
+/* Card Styling */
+.signup-card {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Input Fields */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff3f6c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 63, 108, 0.5);
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #ff3f6c; /* Signature color */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6395b;
+}
+
+/* Social Signup */
+.social-signup {
+  margin-top: 1.5rem;
+}
+
+.social-signup p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.social-button {
+  width: 48%;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.social-button.google {
+  background-color: #db4437;
+  color: #fff;
+}
+
+.social-button.facebook {
+  background-color: #4267b2;
+  color: #fff;
+}
+
+/* Signup Footer */
+.signup-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.signup-text a {
+  color: #ff3f6c;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}

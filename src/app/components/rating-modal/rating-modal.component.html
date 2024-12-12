@@ -1,0 +1,17 @@
+<h2 class="rating-title">Rate Your Order</h2>
+<div class="rating-form">
+  <div class="form-field">
+    <label for="ratingScore">Rating (1-5):</label>
+    <input type="number" [(ngModel)]="ratingScore" min="1" max="5" class="rating-input" />
+  </div>
+
+  <div class="form-field">
+    <label for="reviewText">Review:</label>
+    <textarea [(ngModel)]="reviewText" class="review-textarea"></textarea>
+  </div>
+
+  <div class="actions">
+    <button mat-button class="submit-btn" (click)="submitRating()">Submit</button>
+    <button mat-button class="cancel-btn" (click)="dialogRef.close()">Cancel</button>
+  </div>
+</div>

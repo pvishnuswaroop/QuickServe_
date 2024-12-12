@@ -1,0 +1,131 @@
+/* Center the whole page content */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default body margin */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    font-family: Arial, sans-serif;
+}
+
+/* Rating Form Title */
+.rating-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* Dark text for readability */
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Amazon Ember', sans-serif; /* Optional font similar to Amazon */
+}
+
+/* Rating Form Container */
+.rating-form {
+    max-width: 500px; /* Increase max-width for larger form */
+    width: 100%;
+    padding: 40px;
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for a lift effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space equally */
+    align-items: center; /* Center content horizontally */
+    gap: 25px; /* Spacing between elements */
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    height: 500px; /* Fix height for equal window size */
+}
+
+/* Form Field Styling */
+.form-field {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.form-field label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #555; /* Dark gray for text */
+    margin-bottom: 8px;
+    text-align: left; /* Align the labels to the left */
+}
+
+/* Rating Input and Review Textarea with Bold Font and Thicker Outline */
+.rating-input, .review-textarea {
+    width: 100%; /* Ensure they take full width without causing overflow */
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold; /* Bold text inside the input and textarea */
+    border: 2px solid #ddd; /* Thicker light gray border for inputs */
+    border-radius: 8px;
+    background-color: #f8f8f8; /* Slightly light background for input fields */
+    transition: border-color 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.rating-input:focus, .review-textarea:focus {
+    border-color: #f0a500; /* Amazon Yellow */
+    outline: none;
+}
+
+/* Textarea Styling */
+.review-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Button Styling */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+.submit-btn, .cancel-btn {
+    flex-grow: 1;
+    padding: 14px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-align: center; /* Center the button text */
+}
+
+.submit-btn {
+    background-color: #ff9900; /* Amazon-like yellow */
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #e68900; /* Darker shade of yellow for hover effect */
+}
+
+.cancel-btn {
+    background-color: #f3f3f3;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.cancel-btn:hover {
+    background-color: #e6e6e6; /* Slight hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .rating-form {
+        width: 90%; /* Ensure it remains responsive on mobile */
+        padding: 25px;
+        height: auto; /* Allow auto height for smaller screens */
+    }
+
+    .rating-title {
+        font-size: 1.6rem; /* Slightly smaller font on mobile */
+    }
+
+    .submit-btn, .cancel-btn {
+        width: 100%;
+        padding: 12px; /* Adjust padding for mobile */
+    }
+}

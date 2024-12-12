@@ -1,0 +1,48 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <div class="profile-picture">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small_2x/profile-icon-design-free-vector.jpg" alt="Profile Picture" />
+    </div>
+    <h1>Your Profile</h1>
+  </div>
+
+
+  <!-- Profile Details (View Mode) -->
+  <div class="profile-details" *ngIf="!isEditing">
+    <p><strong>Name:</strong> {{ userDetails.name }}</p>
+    <p><strong>Email:</strong> {{ userDetails.email }}</p>
+    <p><strong>Contact Number:</strong> {{ userDetails.contactNumber }}</p>
+
+    <div class="profile-actions">
+      <button mat-raised-button color="primary" routerLink="/orders">View Orders</button>
+      <button mat-raised-button color="primary" (click)="enableEdit()">Edit Profile</button>
+      <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+    </div>
+  </div>
+
+  <!-- Profile Edit Mode -->
+  <div class="profile-edit" *ngIf="isEditing">
+    <form>
+      <mat-form-field>
+        <input matInput name="name" placeholder="Name" [(ngModel)]="userDetails.name" required/>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput name="contactNumber" placeholder="Contact Number" [(ngModel)]="userDetails.contactNumber" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput name="email" placeholder="Email" [(ngModel)]="userDetails.email" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" name="password" placeholder="New Password (optional)" [(ngModel)]="userDetails.password" />
+      </mat-form-field>
+
+      <div class="profile-actions">
+        <button mat-raised-button color="primary" (click)="saveUserDetails()">Save</button>
+        <button mat-raised-button color="warn" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

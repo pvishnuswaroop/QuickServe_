@@ -1,0 +1,13 @@
+<h2 mat-dialog-title class="dialog-title">Enter Your Address</h2>
+
+<mat-dialog-content class="dialog-content">
+  <mat-form-field appearance="fill" class="address-field">
+    <mat-label>Address</mat-label>
+    <input matInput [(ngModel)]="data.address" placeholder="Enter your address" required />
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions class="dialog-actions">
+  <button mat-button class="cancel-btn" (click)="onCancel()">Cancel</button>
+  <button mat-raised-button class="submit-btn" (click)="onSubmit()">Submit</button>
+</mat-dialog-actions>
